@@ -1,0 +1,25 @@
+name: CI (Python application test with Github actions)
+
+# Controls when the workflow will run
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.7.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.7.10
+      - name: Install dependencies
+        run: |
+          make install
+      - name: Lint with PyLint
+        run: |
+          make lint
+      - name: Test with Pytest
+        run: |
+          make test
+      - name: Format code with Python black
+        run: |
+          make format
