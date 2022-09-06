@@ -13,7 +13,7 @@ jobs:
           python-version: 3.9.13
       - name: Install dependencies
         run: |
-          make install
+          make install-azure
       - name: Lint with PyLint
         run: |
           make lint
