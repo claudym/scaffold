@@ -1,4 +1,4 @@
-name: CI (Python application test with Github actions)
+name: AWS CI (Python 3.7.10)
 
 # Controls when the workflow will run
 on: [push]
